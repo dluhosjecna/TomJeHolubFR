@@ -1,0 +1,599 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 70px; 
+        }
+        
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .site-header {
+            background-color: #33292a;
+            color: #fff;
+            width: 100%;
+            min-height: 70px; 
+            position: fixed; 
+            top: 0;     
+            left: 0;        
+            transition: top 0.3s; 
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 60px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-list a:hover {
+            opacity: 0.8;
+            color: #e0e0e0;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+        }
+
+        .hero-section {
+            height: 95vh;
+            background-image: url("img/scott-goodwill.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 50px 20vw 10vw 50px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .hero-text {
+            text-align: right;
+        }
+
+        .hero-text h1 {
+            font-size: 120px;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .about-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex; 
+            align-items: center; 
+            gap: 60px;
+        }
+
+        .about-content {
+            flex: 1; 
+            text-align: left;
+        }
+
+        .about-content h2 {
+            font-size: 40px;
+            color: #3b3030;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0; 
+        }
+
+        .about-image {
+            flex: 1; 
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 0; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .what-we-do-section {
+            background-color: #33292a;
+            color: #ffffff;
+            padding: 80px 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .what-we-do-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .what-we-do-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .what-we-do-section .description {
+            max-width: 750px;
+            margin: 0 auto 60px;
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .what-we-do-section .activities {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .what-we-do-section .activity {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .what-we-do-section .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 15px;
+        }
+        .what-we-do-section .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .what-we-do-section .activity span {
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        .our-trips-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .our-trips-grid {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            justify-items: center;
+        }
+
+        .our-trips-grid img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover; 
+            border-radius: 5px;
+        }
+
+        .trip-text {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .trip-text h2 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .where-to-go-section {
+            background-color: #644b4f; 
+            color: #ffffff;
+            padding: 80px 20px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        .where-to-go-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .where-to-go-section .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .where-to-go-section .title-column {
+            flex: 1;
+        }
+
+        .where-to-go-section h2 {
+            font-size: 40px;
+            margin: 0;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .where-to-go-section .text-column {
+            flex: 1.5;
+        }
+
+        .where-to-go-section p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .where-to-go-section .btn-contact {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .where-to-go-section .btn-contact:hover {
+            background-color: #e0e0e0;
+        }
+
+        .reviews-section {
+            padding: 100px 20px; 
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            text-align: center;
+        }
+
+        .reviews-section .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+
+
+        .reviews-header h2 {
+            font-size: 40px; 
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .reviews-header .subtitle {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 550px; 
+            margin: 0 auto 80px auto;
+            color: #333;
+        }
+
+
+        .reviews-grid {
+            display: flex;
+            justify-content: center;
+            gap: 80px; 
+            max-width: 950px; 
+            margin: 0 auto;
+        }
+
+        .review-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+
+        .avatar-wrapper {
+        width: 160px; 
+        height: 160px;
+        margin-bottom: 35px;
+        }
+
+        .avatar-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        }
+
+
+        .review-text {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        color: #333333;
+        max-width: 380px; 
+        }
+
+        .reviewer-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: auto;
+        }
+
+        .images-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        max-width: 1440px; 
+        margin: 60px auto; 
+        gap: 0; 
+        }
+
+        .images-section img {
+        width: 100%;
+        height: 405px; 
+        object-fit: cover; 
+        display: block; 
+        }
+
+        .site-footer {
+        background-color: #333333; 
+        color: #efa69d;
+        text-align: center;
+        padding: 60px 20px; 
+        font-family: 'Roboto', sans-serif;
+        }
+
+        .site-footer a {
+        color: #d98880; 
+        text-decoration: underline;
+        font-size: 16px;
+        display: inline-block;
+        margin-bottom: 15px;
+        }
+
+        .site-footer a:hover {
+        color: #e9877b;
+        text-decoration: none; 
+        }
+
+        .site-footer p {
+        font-size: 16px;
+        margin: 0;
+        opacity: 0.7; 
+        letter-spacing: 0.5px;
+        }
+        .site-header, .what-we-do-section, .where-to-go-section, .site-footer, .images-section {
+            width: 100%;
+        }
+
+
+        @media (max-width: 992px) {
+            
+            .container {
+                width: 95%;
+            }
+
+            .hero-section{
+                padding: 50px 50px 80px 50px;
+            }
+
+            .hero-text{
+                font-size: 80px;
+            }
+
+            .site-header {
+                justify-content: flex-end;
+            }
+            .hamburger {
+                display: block;
+                z-index: 200;
+            }
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+            .nav-list {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background-color: #3b3030;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding-bottom: 20px;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            }
+            .nav-list.active { left: 0; }
+            .nav-list li { width: 100%; margin: 30px 0; }
+
+         
+            .about-container {
+                gap: 40px;
+            }
+            .about-image img {
+                height: 500px;
+                object-fit: cover;
+                width: 100%;
+            }
+
+        
+            .our-trips-grid {
+                max-width: 800px; 
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+            .our-trips-grid img, .trip-text {
+                height: 300px; 
+            }
+            .trip-text h2 {
+                font-size: 40px;
+            }
+
+     
+            .images {
+                max-width: 992px;
+                grid-template-columns: 1fr 1fr;
+            }
+            .images img {
+                height: 300px; 
+            }
+        }
+   
+        @media (max-width: 768px) {
+
+   
+            .hero-text h1 { 
+                font-size: 64px;
+                line-height: 1.2;
+                margin: 0; 
+            }
+            .hero-section { 
+               padding: 40px;
+            }
+
+      
+            .about-container {
+                flex-direction: column; 
+                gap: 30px;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+             .what-we-do-section {
+                padding: 60px 20px;
+            }
+
+            .what-we-do-section h2 {
+                font-size: 32px;
+            }
+
+            .what-we-do-section .description {
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+
+            .what-we-do-section .activities {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .what-we-do-section .activity {
+                width: 100%;
+            }
+
+            .what-we-do-section .icon {
+                width: 56px;
+                height: 56px;
+                margin-bottom: 12px;
+            }
+
+            .what-we-do-section .activity span {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .our-trips-section {
+                padding: 60px 16px;
+            }
+
+            .our-trips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .our-trips-grid img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .trip-text {
+                height: 300px;
+                max-width: 100%;
+            }      
+            
+            .where-to-go-section .content-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+  
+            .where-to-go-section h2 {
+                font-size: 32px;
+            }
+
+            .reviews-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 60px;
+            }
+            
+            .reviews-header h2 {
+                font-size: 40px; 
+            }
+
+            .review-text {
+                max-width: 100%; 
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+            }
+            
+            .images img {
+                height: 250px;
+                border-radius: 5px;
+            }
+        }
