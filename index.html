@@ -3,290 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Travel Header s Menu</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding-top: 70px;
-        }
-
-        .site-header {
-            background-color: #3b3030;
-            width: 100%;
-            min-height: 70px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            transition: top 0.3s;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-        }
-
-        .nav-list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            gap: 60px;
-        }
-
-        .nav-list a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            transition: opacity 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .nav-list a:hover {
-            opacity: 0.8;
-            color: #e0e0e0;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            transition: all 0.3s ease-in-out;
-            background-color: white;
-        }
-
-        .hero-section {
-            height: 600px;
-            background-image: url('img/scott-goodwill.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 50px;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .hero-text {
-            text-align: right;
-        }
-
-        .hero-text h1 {
-            font-size: 4rem;
-            line-height: 1.2;
-            margin: 0;
-        }
-
-        .about-section {
-            padding: 80px 20px;
-            background-color: #ffffff;
-        }
-
-        .about-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .about-content {
-            flex: 1;
-            text-align: left;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            color: #3b3030;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-
-        .about-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .site-header {
-                justify-content: flex-end;
-            }
-
-            .hamburger {
-                display: block;
-                z-index: 200;
-            }
-
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            .nav-list {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                gap: 0;
-                flex-direction: column;
-                background-color: #3b3030;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding-bottom: 20px;
-                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-            }
-
-            .nav-list.active {
-                left: 0;
-            }
-
-            .nav-list li {
-                width: 100%;
-                margin: 15px 0;
-            }
-
-            .hero-text h1 {
-                font-size: 4rem;
-            }
-
-            .hero-section {
-                padding: 40px;
-            }
-
-            .about-container {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .about-content {
-                text-align: center;
-            }
-
-            .about-content h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-<header class="site-header">
-    <nav>
-        <ul class="nav-list">
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#">What We Do</a></li>
-            <li><a href="#">Our Trips</a></li>
-            <li><a href="#">Where to go</a></li>
-            <li><a href="#">Reviews</a></li>
-        </ul>
-    </nav>
-    <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-</header>
+    <header class="site-header">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#what-we-do">What We Do</a></li>
+                <li><a href="#our-trips">Our Trips</a></li>
+                <li><a href="#where-to-go">Where to go</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
 
-<section class="hero-section">
-    <div class="hero-text">
-        <h1>Your<br>Travel<br>Assistant</h1>
-    </div>
-</section>
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>
+                Your<br>
+                Travel<br>
+                Assistant
+            </h1>
+        </div>
+    </section>
 
-<section class="about-section" id="about-us">
-    <div class="about-container">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>
-                Leigh McAdam is Calgary-based writer, photographer and social media enthusiast with over
-                48,000 followers. Her blog: HikeBikeTravel is frequently cited as one of the top travel and
-                outdoor adventure blogs in Canada, and consistently receives over 135,000 monthly page views.
-                She shares her enthusiasm for the outdoor as a brand ambassador for Sporting Life, and has
-                worked on campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is the author of
-                Discover Canada: 100 Inspiring Outdoor Adventures.
+
+    <section id="about-us" class="about-section" >
+        <div class="container">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>
+                    Leigh McAdam is Calgary-based writer,
+                    photographer and social media enthusiast with over
+                    48,000 followers. Her blog: HikeBikeTravel is
+                    frequently cited as one of the top travel and our outdoor
+                    adventure blogs in Canada, and consistently receives
+                    over 135,000 monthly page views. She shares her
+                    enthusiasm for th outdoor as a brand ambassador
+                    for Sporting Life, and has worked on campaigns for
+                    Travel Alberta, Expedia and Flight Hub Leigh is the
+                    autor of Discover Canada: 100 Inspiring Outdoor
+                    Adventures. Currently, she is co-authoring: 125 Nature
+                    Hot Spots in Alberta (spring 2018). A true adventurer,
+                    Leigh will try anything once, except perhaps bungee jumping.
+                </p>
+            </div>
+
+
+            <div class="about-image">
+                <img src="img\anneliese-phillips-uv4-vl3liKM-unsplash.jpg" alt="Náš tým">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="what-we-do" class="what-we-do-section" >
+        <div class="container">
+        <div class="what-we-do-container">
+            <h2>What We Do</h2>
+
+            <p class="description">
+                Opportunities for challenging hikes and pleasant strolls are scattered all over this planet;
+                you just need to know where to find them. We do. Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out there, waiting for you to walk all over them.
+                We’re proud of our record of successful ascents (over 92% of our travellers make it to the top of Kili, depending on the route), but it’s our CEOs and local guides that make the journey itself as memorable as the summit. 
+                And if you’re not into big climbs, don’t sweat it; we’ve got loads of lower-impact walks and iconic treks you’ll love, too.
             </p>
+
+            <div class="activities">
+                <div class="activity">
+                    <div class="icon">
+                        <img src="img/hiking.svg" alt="">
+                    </div>
+                    <span>Hiking</span>
+                </div>
+
+                <div class="activity">
+                    <div class="icon">
+                        <img src="img/cycle.svg" alt="">                    
+                    </div>
+                    <span>Cycling</span>
+                </div>
+
+                <div class="activity">
+                    <div class="icon">
+                        <img src="img/water.svg" alt="">
+                    </div>
+                    <span>Surfing</span>
+                </div>
+
+                <div class="activity">
+                    <div class="icon">
+                        <img src="img/car.svg" alt="">
+                    </div>
+                    <span>Car trips</span>
+                </div>
+            </div>
         </div>
-        <div class="about-image">
-            <img src="img/anneliese-phillips-uv4-vl3liKM-unsplash.jpg" alt="">
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-list");
-    const header = document.querySelector(".site-header");
-    let lastScrollTop = 0;
+    <section id="our-trips" class="our-trips-section">
+        <div class="container">
+        <div class="our-trips-grid">
+            <img src="img\simon-english-48nerZQCHgo-unsplash.jpg" alt="">
+            <img src="img\james-wheeler-ZOA-cqKuJAA-unsplash.jpg" alt="">
+            <img src="img\daniel-tseng-73lmMKhi2U8-unsplash.jpg" alt="">
 
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    });
+            <img src="img\holly-mandarich-UVyOfX3v0Ls-unsplash.jpg" alt="">
+            <div class="trip-text">
+            <h2>Our Trips</h2>
+            </div>
+            <img src="img\patrick-szylar-45bM3XGqnDE-unsplash.jpg" alt="">
 
-    document.querySelectorAll(".nav-list a").forEach(link =>
-        link.addEventListener("click", () => {
+            <img src="img\chung-yee-tsang-wqxCKM0R6R8-unsplash.jpg" alt="">
+            <img src="img\julian-bialowas-ilkTnuMunP8-unsplash.jpg" alt="">
+            <img src="img\matej-drha-rbDzMcJsBkY-unsplash.jpg" alt="">
+        </div>
+        </div>
+    </section>
+
+    <section class="where-to-go-section" id="where-to-go">
+        <div class="container">
+        <div class="where-to-go-container">
+            <div class="content-wrapper">
+                
+                <div class="title-column">
+                    <h2>Where do you want to go?</h2>
+                </div>
+
+                <div class="text-column">
+                    <p>
+                    You’ll find 21 detailed adventure guides, over a hundred practical travel tips,
+                     book reviews on anything outdoors related, 
+                     packing lists on a range of outdoor activities including kayaking, 
+                     backpacking and camping as well as honest hotel and B&B reviews. 
+                    </p>
+                    <p>Contact us and we will help you!</p>
+                    <a href="#" class="btn-contact">CONTACT US</a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+        <div class="reviews-container">
+            
+            <div class="reviews-header">
+            <h2>Reviews</h2>
+            <p class="subtitle">
+                Our amazing clients are the reason we exist, and their reactions to our customized 
+                travel experiences and personalized service keep us smiling all day long. 
+                Here is just a sampling of what they've said:
+            </p>
+            </div>
+
+            <div class="reviews-grid">
+            
+            <article class="review-item">
+                <div class="avatar-wrapper">
+                <img src="img\kalen-emsley-kGSapVfg8Kw-unsplash.jpg" alt="Bertie Norton">
+                </div>
+                <p class="review-text">
+                She has booked two major European trips for us in the past year and every 
+                aspect has met, and in most cases exceeded, our expectations. Best prices, 
+                best hotels, best itineraries, and best cruises, she does it all. But the 
+                most important thing is she remembers the little things that we would do 
+                if we were making the plans ourselves.
+                </p>
+                <h4 class="reviewer-name">Bertie Norton</h4>
+            </article>
+
+            <article class="review-item">
+                <div class="avatar-wrapper">
+                <img src="img\jeffrey-keenan-pUhxoSapPFA-unsplash.jpg" alt="Frank Kinney">
+                </div>
+                <p class="review-text">
+                Leigh McAdam has been making my travel arrangements for about 20 years 
+                and there is no one else I would trust to arrange my trips and tours. 
+                I've also had great fun on a few of the group trips she has arranged - 
+                Peru & Machu Picchu and a 10-day cruise out of Venice and diving. It's 
+                always an eclectic group of well traveled, interesting people.
+                </p>
+                <h4 class="reviewer-name">Frank Kinney</h4>
+            </article>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="images-section">
+    <img src="img\alexey-fedenkov-BaCZYH9RLmQ-unsplash.jpg">
+    <img src="img\omer-salom-LoijtQXXNhs-unsplash.jpg">
+    <img src="img\vincentiu-solomon-7MH4ped6_Mo-unsplash.jpg">
+    <img src="img\daniel-tseng-73lmMKhi2U8-unsplash.jpg">
+    </section>
+
+    <footer class="site-footer">
+    <a href="#">Contact</a>
+    <h6>© 2025 - Your Travel Assistant. All Rights Reserved.</h6>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-list");
+        const header = document.querySelector(".site-header");
+        let lastScrollTop = 0;
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-list a").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
-        })
-    );
+        }));
 
-    window.addEventListener("scroll", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+         
+            if (navMenu.classList.contains("active")) {
+                lastScrollTop = scrollTop;
+                return;
+            }
+           
+            if (scrollTop > lastScrollTop && scrollTop > 70) {
+                header.style.top = "-100px"; 
+            } else {
 
-        if (navMenu.classList.contains("active")) {
+                header.style.top = "0";
+            }
             lastScrollTop = scrollTop;
-            return;
-        }
-
-        if (scrollTop > lastScrollTop && scrollTop > 70) {
-            header.style.top = "-100px";
-        } else {
-            header.style.top = "0";
-        }
-
-        lastScrollTop = scrollTop;
-    });
-</script>
+        });
+    </script>
 
 </body>
 </html>
